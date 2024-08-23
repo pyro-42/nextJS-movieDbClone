@@ -1,0 +1,23 @@
+{
+    "name": "next-app",
+    "image": "mcr.microsoft.com/devcontainers/javascript-node:20-bullseye",
+    "runArgs": ["--name=next-app", "--env-file=../.env"],
+    "postCreateCommand": ".devcontainer/postCreateCommand.sh",
+    "containerEnv": {
+        "TZ": "America/Vancouver"
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "codeium.codeium", //Autocomplete
+                "esbenp.prettier-vscode", //Prettier
+                "wallabyjs.console-ninja", //Console Ninja for console.log() next to code
+                "formulahendry.auto-rename-tag", //Auto Rename Tag
+                "cardinal90.multi-cursor-case-preserve", //Multi Cursor Case Preserve
+                "bradlc.vscode-tailwindcss", //Tailwind
+                "dsznajder.es7-react-js-snippets" // React Snippets
+            ]
+        }
+    },
+    "shutdownAction": "stopContainer"
+}
